@@ -22,7 +22,10 @@ def result():
 
     try:
         r = requests.post(input_url, data=final_msg)
-        return render_template("success.html")
+        if r.ok:
+            return render_template("success.html")
+        else:
+            return render_template("failed.html")
     except:
         return render_template("failed.html")
 
