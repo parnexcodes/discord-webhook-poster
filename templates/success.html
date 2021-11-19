@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script src="https://kit.fontawesome.com/f022f6f380.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Discord Webhook Poster</title>
+</head>
+<body>
+    <div class="result">
+        <p><i class="fas fa-check-circle"></i>  Sent Successfully!</p>
+        <p> The page will redirect in <span id="countdowntimer">5 </span> Seconds.</p>
+    </div>
+
+<script>
+    setTimeout(function(){
+        window.location.href = '/';
+    }, 5000);
+    </script>
+
+<script type="text/javascript">
+    var timeleft = 5;
+    var downloadTimer = setInterval(function(){
+    timeleft--;
+    document.getElementById("countdowntimer").textContent = timeleft;
+    if(timeleft <= 0)
+        clearInterval(downloadTimer);
+    },1000);
+</script>
+
+<div class="footer">
+    made with ❤ by parnex
+</div>
+
+</body>
+</html>
