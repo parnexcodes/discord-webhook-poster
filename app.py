@@ -11,7 +11,7 @@ def index():
 def result():
     input_url = request.args.get("input-url")
     username = request.args.get("username")
-    avatar_url = request.args.get("avatar_url")
+    avatar_url = request.args.get("avatar-url")
     content = request.args.get("content")
 
     final_msg = {
